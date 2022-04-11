@@ -1,0 +1,120 @@
+//** ==== Root ==== */
+:root {
+  color-scheme: light dark;
+  --clr-white: #fff;
+  --clr-white2: #f2f2f2;
+  --clr-white3: #bfbfbf;
+  --clr-white4: #fcfdfd;
+  --clr-black: #000;
+  --clr-black-2: #0d0d0d;
+  --clr-gray: #404040;
+  /*=Font Size=*/
+  --font-size-extra: 3rem;
+  --font-size-title: 2.4rem;
+  --font-size-Big: 1.8rem;
+  --font-size-Medium: 1.6rem;
+  --font-size-medium-plus: 1.5rem;
+  --font-size-small: 1.2rem;
+  -font-size-small-plus: 0.8rem;
+  /*=Margins=*/
+  --margin-top: 2rem;
+  --margin-bottom: 2rem;
+  --margin-left: 1rem;
+  --margin-right: 1rem;
+  --margin: 0 auto;
+  /*=Text=*/
+  --letter-spacing: 0.1rem;
+  /* =  Shadows =*/
+  --shadow-color: 286deg 36% 56%;
+  --shadow-elevation-low: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),
+    1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
+  --shadow-elevation-medium: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+  --shadow-elevation-high: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    1.5px 2.9px 3.7px -0.4px hsl(var(--shadow-color) / 0.34),
+    2.7px 5.4px 6.8px -0.7px hsl(var(--shadow-color) / 0.34),
+    4.5px 8.9px 11.2px -1.1px hsl(var(--shadow-color) / 0.34),
+    7.1px 14.3px 18px -1.4px hsl(var(--shadow-color) / 0.34),
+    11.2px 22.3px 28.1px -1.8px hsl(var(--shadow-color) / 0.34),
+    17px 33.9px 42.7px -2.1px hsl(var(--shadow-color) / 0.34),
+    25px 50px 62.9px -2.5px hsl(var(--shadow-color) / 0.34);
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --light-color: #fff;
+  --light-color-alt: #afb6cd;
+  --primary-background-color: #131417;
+  --secondary-background-color: #252830;
+  --hover-light-color: var(--light-color);
+  --hover-dark-color: var(--primary-background-color);
+  --gradient-color: linear-gradient(
+    115deg,
+    #4fcf70,
+    #fad648,
+    #a767e5,
+    #12bcfe,
+    #44ce7b
+  );
+  --transparent-light-color: rgba(255, 255, 255, 0.05);
+  --transparent-dark-color: rgba(0, 0, 0, 0.75);
+
+  ---bg: #374954;
+  --bg2: #191d2b;
+  --color-white: #fff;
+  --bg3: #4f6877;
+  --color-green: #6bbe92;
+  --color-red: #e74c3c;
+  --filter: drop-shadow(0px 4px 22px rgba(0, 0, 0, 0.25));
+}
+
+//** ==== System Design  General ====*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+/** =Animation =*/
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+ul {
+  list-style: none;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+p,
+span {
+  letter-spacing: 0.1rem;
+}
+i {
+  font-size: 1.8rem;
+}
+img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+}
+.btn:active {
+  transform: scale(0.9);
+}
+body {
+  width: 100%;
+}
