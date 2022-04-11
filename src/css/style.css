@@ -1,4 +1,7 @@
-//** ==== Root ==== */
+/** IMPORT*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,500&display=swap");
+
+/** ==== Root ==== */
 :root {
   color-scheme: light dark;
   --clr-white: #fff;
@@ -117,4 +120,119 @@ img {
 }
 body {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: var(--color-white);
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 2.4rem;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 1rem;
+}
+
+/** ===  Project */
+.main__container {
+  background-color: #374954;
+  width: 80%;
+  margin: 0 auto;
+  height: 850px;
+  border-radius: 1.5rem;
+  overflow-y: auto;
+}
+.main__container::-webkit-scrollbar {
+  width: 7px;
+}
+.main__container::-webkit-scrollbar-track {
+  background: #c4c4c4;
+}
+.main__container::-webkit-scrollbar-thumb {
+  background: linear-gradient(179.75deg, #eb5757 -12.26%, #4f6877 55.88%);
+  border-radius: 10px;
+}
+.header .nav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+.header .nav .todo__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.header .nav .todo__form input {
+  font-family: inherit;
+  font-size: 1.8rem;
+  outline: none;
+  border: none;
+  background-color: #4f6877;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  color: inherit;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  transition: all 0.4s ease-in-out;
+}
+
+.header .nav .todo__form input::placeholder {
+  color: #f2f2f2;
+  opacity: 0.8;
+}
+
+.header .nav .todo__form button {
+  background-color: var(--color-green);
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  border: none;
+  padding: 0.7rem 2rem;
+  border-radius: 3rem;
+  color: #f2f2f2;
+  font-weight: 500;
+  align-self: flex-start;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.header .nav .todo__form button:hover {
+  color: var(--color-green);
+  background-color: var(---bg);
+}
+.header .nav .search__form {
+  margin-top: 3rem;
+  width: 100%;
+}
+.header .search__form input {
+  filter: var(--filter);
+  outline: none;
+  border: none;
+  background-color: #4f6877;
+  border-radius: 1rem;
+  padding: 0.5rem 2rem;
+  width: 100%;
+  display: flex;
+  align-self: center;
+  transition: all 0.4s ease-in-out;
+  color: #f2f2f2;
+}
+.header .search__form input::placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+
+/** ==> MAIN == */
+.main {
+  width: 70%;
+  margin: 0 auto;
 }
