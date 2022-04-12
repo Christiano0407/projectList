@@ -3,6 +3,7 @@ const container = document.querySelector(".main__container");
 const submitBtn = document.querySelector("sub__btn");
 const input = document.querySelector(".f__input");
 const todos = document.querySelector(".todos");
+console.log(todos);
 const todoContainer = document.querySelector(".todo__container");
 console.log(todoContainer);
 const todoForm = document.querySelector(".todo__form");
@@ -60,4 +61,30 @@ todoContainer.addEventListener("dblclick", (e) => {
   if (e.target.classList.contains("todo-item")) {
     e.target.classList.toggle("completed");
   }
+});
+
+//** === Todo Filter ==  */
+
+const filterTodos = (query) => {
+  let todoItems = Array.from(todos.children);
+
+  todoItems.forEach((todo) => {
+    //if the todo text contains query then show >
+    let text = todo.textContent;
+
+    if (text.toLowerCase().includes(query)) {
+      todo.style.display = "flex";
+    } else {
+      todo.style.display = "none";
+    }
+  });
+};
+
+//** >>> Search Items << */
+// Keyup => El evento es iniciado cuando la tecla es soltada.
+
+searchInput.addEventListener("keyup", (e) => {
+  let query = e.target.value.trim().toLowerCase();
+  //filter based on serach
+  filterTodos(query);
 });
